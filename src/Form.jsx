@@ -2,10 +2,13 @@ import { useState } from "react";
 import { notifyError, notifySuccess } from "./Toast";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
+import "./Login.css";
+
 
 
 const Form = () => {
-
+  const navigate = useNavigate();
   const submitForm = () => {
     const requestOptions = {
       method: "POST",
@@ -23,11 +26,12 @@ const Form = () => {
           notifyError();
         } else {
           notifySuccess();
+          navigate("/admin");
         }
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log(data.token);
       });
   };
   const [email, setEmail] = useState("");

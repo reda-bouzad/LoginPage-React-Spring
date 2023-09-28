@@ -1,29 +1,17 @@
-import "./App.css";
-
-import Form from "./Form";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import Admin from "./Admin";
+import "./Login.css"
 
 function App() {
   return (
     <>
-      <div className="container">
-        <div className="square1"></div>
-        <div className="square2">
-          <div className="intro">
-            <h1>Sign up</h1>
-            <p>
-              Welcome to WoodMart <br /> Register as a member to experience.{" "}
-            </p>
-          </div>
-          <div className="myForm">
-            <Form />
-          </div>
-          <div className="footer">
-            <p>
-              Already a member? <span> Sign in</span>
-            </p>
-          </div>
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </Router>
     </>
   );
 }
