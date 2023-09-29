@@ -1,13 +1,28 @@
 import "./Login.css";
 import Form from "./Form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRole } from "./RoleContext";
 
-const Login = () => {
-
-    const [dataFromChild, setDataFromChild] = useState(null);
-
+const Login = ({  }) => {
+  const sendDataToParentComponent = () => {
+    // Call the function passed from the parent component
+  };
+  const { role, setRole } = useRole();
+    useEffect(() => {
+        // Code to run whenever the value of 'role' changes
+        console.log('Role has changed:', role);
+        sendDataToParentComponent();
+    
+        // You can perform any other actions based on the new 'role' value here
+    
+        // Don't forget to cleanup if needed
+        return () => {
+          // Code to run when the component is unmounted or when 'role' changes
+          // This acts like componentWillUnmount in class components
+        };
+      }, [role]); 
     const receiveDataFromChild = (data) => {
-        setDataFromChild(data);
+        setRole(data);
         console.log("data" + data)
       };
 
@@ -32,7 +47,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <h1>role : {dataFromChild}</h1>
         </>
     );
 }

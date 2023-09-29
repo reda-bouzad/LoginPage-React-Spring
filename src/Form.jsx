@@ -8,7 +8,7 @@ import jwt_decode from 'jwt-decode';
 
 const Form = ({ sendDataToParent }) => {
   let token;
-  let role ;
+  let role;
   const navigate = useNavigate();
   const [dataToSend, setDataToSend] = useState('');
   const sendDataToParentComponent = () => {
@@ -32,7 +32,9 @@ const Form = ({ sendDataToParent }) => {
           notifyError();
         } else {
           notifySuccess();
-          // navigate("/admin");
+          setTimeout(() => {
+          navigate("/home");
+          }, 500);
         }
         return response.json();
       })
@@ -40,14 +42,15 @@ const Form = ({ sendDataToParent }) => {
         token = data.token;
         let decoded = jwt_decode(token);
         console.log(decoded);
-        if (decoded.role == "[ROLE_USER]"){
+        if (decoded.role == "[ROLE_USER]") {
           role = "User";
-        } else if (decoded.role == "[ROLE_ADMIN]"){
-          role == "Admin";
+        } else if(decoded.role.includes("ADMIN_READ")) {
+          role = "Admin";
         }
         console.log(decoded.role)
         console.log("the role of the is " + role)
         sendDataToParentComponent();
+        localStorage.setItem('role', role);
       });
   };
   const [email, setEmail] = useState("");
@@ -77,7 +80,6 @@ const Form = ({ sendDataToParent }) => {
         value="Create account"
         type="submit"
       />
-      <button onClick={sendDataToParentComponent}>Click me</button>
     </>
   );
 }
