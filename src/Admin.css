@@ -1,7 +1,24 @@
 
 
-.myy-container{
+.myContainer{
     width: 100vw;
     height: 100vh;
     background-color: black;
 }
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .myfooter {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }

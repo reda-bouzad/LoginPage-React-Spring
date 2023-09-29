@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { notifyError, notifySuccess } from "./Toast";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom';
 import "./Login.css";
+import jwt_decode from 'jwt-decode';
 
-
-
-const Form = () => {
+const Form = ({ sendDataToParent }) => {
+  let token;
+  let role ;
   const navigate = useNavigate();
+  const [dataToSend, setDataToSend] = useState('');
+  const sendDataToParentComponent = () => {
+    // Call the function passed from the parent component
+    sendDataToParent(role);
+  };
   const submitForm = () => {
     const requestOptions = {
       method: "POST",
@@ -26,12 +32,22 @@ const Form = () => {
           notifyError();
         } else {
           notifySuccess();
-          navigate("/admin");
+          // navigate("/admin");
         }
         return response.json();
       })
       .then((data) => {
-        console.log(data.token);
+        token = data.token;
+        let decoded = jwt_decode(token);
+        console.log(decoded);
+        if (decoded.role == "[ROLE_USER]"){
+          role = "User";
+        } else if (decoded.role == "[ROLE_ADMIN]"){
+          role == "Admin";
+        }
+        console.log(decoded.role)
+        console.log("the role of the is " + role)
+        sendDataToParentComponent();
       });
   };
   const [email, setEmail] = useState("");
@@ -61,6 +77,7 @@ const Form = () => {
         value="Create account"
         type="submit"
       />
+      <button onClick={sendDataToParentComponent}>Click me</button>
     </>
   );
 }

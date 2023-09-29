@@ -1,7 +1,16 @@
 import "./Login.css";
 import Form from "./Form";
+import { useState } from "react";
 
 const Login = () => {
+
+    const [dataFromChild, setDataFromChild] = useState(null);
+
+    const receiveDataFromChild = (data) => {
+        setDataFromChild(data);
+        console.log("data" + data)
+      };
+
     return (
         <>
             <div className="container">
@@ -14,7 +23,7 @@ const Login = () => {
                         </p>
                     </div>
                     <div className="myForm">
-                        <Form />
+                        <Form  sendDataToParent={receiveDataFromChild}/>
                     </div>
                     <div className="footer">
                         <p>
@@ -23,6 +32,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <h1>role : {dataFromChild}</h1>
         </>
     );
 }
