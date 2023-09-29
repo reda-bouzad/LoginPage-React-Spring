@@ -48,9 +48,12 @@ const Form = ({ sendDataToParent }) => {
           role = "Admin";
         }
         console.log(decoded.role)
+        console.log(decoded.sub)
         console.log("the role of the is " + role)
         sendDataToParentComponent();
         localStorage.setItem('role', role);
+        localStorage.setItem('email', decoded.sub);
+
       });
   };
   const [email, setEmail] = useState("");

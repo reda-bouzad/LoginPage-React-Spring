@@ -1,24 +1,181 @@
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:ital@1&family=Poppins:wght@100&family=Prompt:ital,wght@0,200;1,400&family=Roboto&family=Rubik:wght@500&family=Shadows+Into+Light&display=swap');
 
-
-.myContainer{
+  .myContainer {
     width: 100vw;
     height: 100vh;
     background-color: black;
-}
+  }
 
-.wrapper{
+  .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
- .myfooter {
+  .myfooter {
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
   }
 
-  h1{
+  .box {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .box1 {
+    width: 30vw;
+    height: 78vh;
+    border: 2px solid rgb(100, 99, 99);
+    margin-left: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box2 {
+    width: 60vw;
+    height: 78vh;
+    display: flex;
+    align-items: center;
+    border:1px solid white;
+    margin-left: 30px;
+    border-radius:30px;
+    border: 2px solid rgb(100, 99, 99);
+    flex-direction: column;
+  }
+
+  input#checkbox{
+    margin-right: 9px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer
+  }
+
+  input#checkbox:checked {
+    background-color: rgb(10, 86, 38);
+}
+
+  .task{
+    margin-top: 40px;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 30px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-container{
+    margin-top: 30px;
+  }
+
+  .box3 {
+    width: 10vw;
+  }
+
+  .image-container {
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  .email {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  p{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: smaller;
+  }
+
+  .icons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+   .myIconeAdmin{
+    border: 2px solid white;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.my-button{
+  margin-top: 20px;
+  width: 180px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  background-color: #6EE793;
+  border: none;
+  border-radius: 10px;
+  color: black;
+}
+
+.forUser{
+  display: flex;
+}
+
+.userContainer1{
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.userContainer2{
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bigFuckingHeader{
+  font-family: 'Montserrat', sans-serif;
+  padding: 30px;
+  font-size: 50px;
+
+}

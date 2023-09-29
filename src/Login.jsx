@@ -32,7 +32,7 @@ const Login = ({  }) => {
                 <div className="square1"></div>
                 <div className="square2">
                     <div className="intro">
-                        <h1>Sign up</h1>
+                        <h1>Sign in</h1>
                         <p>
                             Welcome to WoodMart <br /> Register as a member to experience.{" "}
                         </p>
@@ -42,7 +42,7 @@ const Login = ({  }) => {
                     </div>
                     <div className="footer">
                         <p>
-                            Already a member? <span> Sign in</span>
+                            Dont have an account ?  <span className="marked"> Sign up</span>
                         </p>
                     </div>
                 </div>

@@ -3,7 +3,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SearchIcon from '@mui/icons-material/Search';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import CallIcon from '@mui/icons-material/Call';
+import { Navigate, useNavigate } from "react-router-dom";
+
 const NavBar = () => {
+    const navigate = useNavigate();
+
+    const signOut = () => {
+        navigate("/")
+    }
     return ( <>
     <div className="navbar">
         <div className="logo">
@@ -20,9 +27,8 @@ const NavBar = () => {
         </div>
         <div className="icons">
         <SearchIcon className="myIcone" sx={{ color: "white"}}/>
-        <PermContactCalendarIcon className="myIcone" sx={{ color: "white"}}/>
-        <CallIcon className="myIcone" sx={{ color: "white"}}/>
-        
+        <CallIcon  className="myIcone" sx={{ color: "white"}}/>
+        <PermContactCalendarIcon onClick={signOut} className="myIcone" sx={{ color: "white"}}/>
         </div>
     </div>
     </> );

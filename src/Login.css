@@ -63,7 +63,7 @@ p {
 
 
 .myForm {
-    margin-top: 70px;
+    margin-top: 50px;
     line-height: 50px;
 }
 
@@ -113,4 +113,10 @@ input[type="checkbox"] {
     margin-left: 100px;
     margin-top: auto;
     margin-bottom: 50px;
+}
+
+.marked{
+    margin-left: 10px;
+    color: #0155B5;
+    font-weight: 700;
 }
