@@ -3,6 +3,7 @@ import Login from "./Login";
 import Home from "./Home";
 import "./Login.css"
 import { RoleProvider, useRole } from "./RoleContext";
+import NotFound from "./NotFound";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route  path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         </RoleProvider>
       </Router>

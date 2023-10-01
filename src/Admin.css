@@ -161,10 +161,29 @@
 .userContainer1{
   width: 50vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   
 }
+
+.button-container{
+  margin-left: 20px;
+}
+
+.myButton44{
+  margin-left: 20px;
+  border: none;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(31, 30, 30);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}
+
+
 .userContainer2{
   width: 50vw;
   display: flex;
@@ -177,5 +196,6 @@
   font-family: 'Montserrat', sans-serif;
   padding: 30px;
   font-size: 50px;
+  margin-left: 60px;
 
 }

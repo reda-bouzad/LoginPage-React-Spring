@@ -34,7 +34,7 @@ const Form = ({ sendDataToParent }) => {
           notifySuccess();
           setTimeout(() => {
           navigate("/home");
-          }, 500);
+          }, 800);
         }
         return response.json();
       })
@@ -80,7 +80,7 @@ const Form = ({ sendDataToParent }) => {
       <input
         onClick={submitForm}
         className="myBtn"
-        value="Create account"
+        value="Login"
         type="submit"
       />
     </>

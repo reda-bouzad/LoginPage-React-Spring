@@ -32,7 +32,7 @@ const Login = ({  }) => {
                 <div className="square1"></div>
                 <div className="square2">
                     <div className="intro">
-                        <h1>Sign in</h1>
+                        <h1>Log   in</h1>
                         <p>
                             Welcome to WoodMart <br /> Register as a member to experience.{" "}
                         </p>

@@ -109,6 +109,11 @@ const Home = () => {
             {isUser && <div className="forUser">
                 <div className="userContainer1">
                     <h1 class="bigFuckingHeader">Take Advantage of WoodMart <span style={{ color: "#6EE793" }}> like a pro</span></h1>
+                    <div className="button-container">
+                    <button className="myButton44">Buy Now</button>                    
+                    <button className="myButton44">Check Products</button> 
+                    </div>
+                   
                 </div>
                 <div className="userContainer2">
                     <img width="500" src={watch} alt="" />

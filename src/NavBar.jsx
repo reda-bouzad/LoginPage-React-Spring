@@ -10,6 +10,8 @@ const NavBar = () => {
 
     const signOut = () => {
         navigate("/")
+        localStorage.removeItem('email');
+        localStorage.removeItem('role');
     }
     return ( <>
     <div className="navbar">
