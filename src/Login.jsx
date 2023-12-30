@@ -34,7 +34,7 @@ const Login = ({  }) => {
                     <div className="intro">
                         <h1>Log   in</h1>
                         <p>
-                            Welcome to WoodMart <br /> Register as a member to experience.{" "}
+                            Bonjour a E-learning <br /> S'authentifier {" "}
                         </p>
                     </div>
                     <div className="myForm">
