@@ -45,7 +45,7 @@ const Form = ({ sendDataToParent }) => {
         if (decoded.role == "[ROLE_USER]") {
           role = "User";
         } else if(decoded.role.includes("ADMIN_READ")) {
-          role = "Admin";
+          role = "Administrator";
         }
         console.log(decoded.role)
         console.log(decoded.sub)
